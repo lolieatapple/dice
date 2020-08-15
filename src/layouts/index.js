@@ -18,7 +18,7 @@ class Index extends Component {
     let results = [];
     let total = 0;
     for (let i=0; i<this.state.r; i++) {
-      let a = 1 + Math.round(Math.random()*this.state.d);
+      let a = 1 + Math.floor(Math.random()*this.state.d);
       total += a;
       results.push(a);
     }
