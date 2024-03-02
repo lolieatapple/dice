@@ -2,6 +2,25 @@ import { Component } from "react";
 import styled from 'styled-components';
 import { Select, Button, Col, Row } from 'antd';
 
+let optionsLong = [];
+for (let i = 2; i <= 100; i++) {
+  optionsLong.push({ value: i });
+}
+let optionsShort = [];
+for (let i = 1; i <= 100; i++) {
+  optionsShort.push({ value: i });
+}
+
+optionsLong.push({ value: 1000 });
+optionsLong.push({ value: 10000 });
+
+optionsShort.push({ value: 1000 });
+optionsShort.push({ value: 10000 });
+optionsShort.push({ value: 100000 });
+optionsShort.push({ value: 1000000 });
+optionsShort.push({ value: 10000000 });
+optionsShort.push({ value: 100000000 });
+
 class Index extends Component {
   constructor(props) {
     super(props);
@@ -30,14 +49,7 @@ class Index extends Component {
   }
 
   render() {
-    let optionsLong = [];
-    for (let i = 2; i <= 100; i++) {
-      optionsLong.push({ value: i });
-    }
-    let optionsShort = [];
-    for (let i = 1; i <= 100; i++) {
-      optionsShort.push({ value: i });
-    }
+    
     return (
       <Body>
         <Title>
@@ -53,6 +65,7 @@ class Index extends Component {
           <MyButton onClick={this.onClear}>Clear</MyButton>
         </InLine>
         <Ground>
+          <h2>Total:{this.state.total}</h2>
           <Row>
             {
               this.state.results.map(v => {
@@ -64,7 +77,6 @@ class Index extends Component {
               })
             }
           </Row>
-          <h2>Total:{this.state.total}</h2>
         </Ground>
       </Body>
     )
