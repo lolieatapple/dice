@@ -13,13 +13,14 @@ for (let i = 1; i <= 100; i++) {
 
 optionsLong.push({ value: 1000 });
 optionsLong.push({ value: 10000 });
+optionsLong.push({ value: 100000 });
+optionsLong.push({ value: 1000000 });
+optionsLong.push({ value: 10000000 });
+optionsLong.push({ value: 100000000 });
 
 optionsShort.push({ value: 1000 });
 optionsShort.push({ value: 10000 });
 optionsShort.push({ value: 100000 });
-optionsShort.push({ value: 1000000 });
-optionsShort.push({ value: 10000000 });
-optionsShort.push({ value: 100000000 });
 
 class Index extends Component {
   constructor(props) {
